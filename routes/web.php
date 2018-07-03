@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/survey', function () {
+    return view('survey');
+});
+
+Route::get('/wall', function () {
+    return view('wall');
+});
