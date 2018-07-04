@@ -16,22 +16,44 @@
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-            <a href="{{ url('/home') }}">Home</a>
-            @else
-            <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('register') }}">Register</a>
-            @endauth
+
+    <div id="mainButton">
+        <div class="btn-text" onclick="openForm()">Sign In</div>
+        <div class="modal">
+            <div class="close-button" onclick="closeForm()">x</div>
+            <div class="form-title">Sign In</div>
+            <div class="input-group">
+                <input type="text" id="name" onblur="checkInput(this)" />
+                <label for="name">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" onblur="checkInput(this)" />
+                <label for="password">Password</label>
+            </div>
+            <div class="form-button" onclick="closeForm()">Go
+                <div>
+                    @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                        <a href="{{ url('/wall') }}">Student Wall/a> @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('profile') }}">create account</a>
+                            @endauth
+                    </div>
+                    @endif
+                </div>
+            </div>
+</div>
         </div>
-        @endif
-
-
+            <div id="createAccountButton">
+                <div class="btn-text" href="create.handlebars">Create Account</div>
+            </div>
+            <div class="codepen-by">StudentConnect 2018</div>
+        </div>
     </div>
-    <script             src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="/assets/js/loginpage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/js/loginpage.js"></script>
 </body>
 
 </html>
