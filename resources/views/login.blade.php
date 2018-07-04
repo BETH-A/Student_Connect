@@ -9,10 +9,9 @@
     <title>Student Connect</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/loginpage.css" />
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,500,300,600' rel='stylesheet' type='text/css' />
 
 </head>
 
@@ -29,36 +28,9 @@
         </div>
         @endif
 
-        <div class="content">
-            <div class="title m-b-md">
-                Student Connect
-            </div>
-            <div id="mainButton">
-                <div class="btn-text" onclick="openForm()">Sign In</div>
-                <div class="modal">
-                    <div class="close-button" onclick="closeForm()">x</div>
-                    <div class="form-title">Sign In</div>
-                    <div class="input-group">
-                        <input type="text" id="name" onblur="checkInput(this)" />
-                        <label for="name">Email</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" id="password" onblur="checkInput(this)" />
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="form-button" onclick="closeForm()">Go</div>
-                    <div class="codepen-by">StudentConnect 2018</div>
-                </div>
-            </div>
 
-            <div id="createAccountButton">
-                <div class="btn-text" href="create.handlebars">Create Account</div>
-            </div>
-
-        </div>
     </div>
-    <footer class="codepen-by">StudentConnect 2018</footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script             src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/assets/js/loginpage.js"></script>
 </body>
 
