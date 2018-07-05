@@ -46,7 +46,7 @@
 </div>
         </div>
             <div id="createAccountButton">
-                <div class="btn-text" href="create.handlebars">Create Account</div>
+                <div class="btn-text" href="{{ url('/profile') }}">Create Account</div>
             </div>
             <div class="codepen-by">StudentConnect 2018</div>
         </div>

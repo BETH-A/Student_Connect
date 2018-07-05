@@ -31,7 +31,7 @@ $("#create-form").on("click", function (event) {
     success: function (data) {
       console.log("---------------MESSAGE-----------");
       console.log(data.id);
-      window.location.href = ("/survey/" + data.id);
+      window.location.href = ("/survey" + data.id);
     }
   });
 

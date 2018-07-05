@@ -15,7 +15,8 @@ class SurveyTable extends Migration
     {
         Schema::create('survey', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->text('movie');
             $table->text('music');
             $table->text('sport');

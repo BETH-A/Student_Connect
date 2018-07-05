@@ -26,6 +26,6 @@ document.addEventListener("keyup", function (e) {
 // JS functionality for the Create Account Button
 $("#createAccountButton").on("click", function() {
 	event.preventDefault();
-	window.location.href = "/create"
+	window.location.href = "/profile"
     console.log("clicked")
 });
