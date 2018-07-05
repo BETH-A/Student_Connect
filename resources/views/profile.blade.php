@@ -55,4 +55,4 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="assets/js/create.js"></script>
+<script src="/js/create.js"></script>
