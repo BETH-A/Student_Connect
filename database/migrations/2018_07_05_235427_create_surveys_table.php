@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SurveyTable extends Migration
+class CreateSurveysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -24,6 +24,7 @@ class SurveyTable extends Migration
             $table->text('activity');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -33,6 +34,6 @@ class SurveyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survey');
+        Schema::dropIfExists('surveys');
     }
 }

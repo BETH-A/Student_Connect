@@ -9,10 +9,12 @@
 
 <div class="container" style="background:white">
 
-  <form>
+  <form method="POST" action="">
+    {{csrf_field() }}
+    
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of movie?</label>
-      <select class="form-control" id="q1">
+      <select class="form-control" id="movie" name="movie">
         <option>Select one of the below...</option>
         <option>Action</option>
         <option>Comedy</option>
@@ -23,7 +25,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of music?</label>
-      <select class="form-control" id="q2">
+      <select class="form-control" id="music" name="music">
         <option>Select one of the below...</option>
         <option>Country</option>
         <option>Pop</option>
@@ -34,7 +36,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite type of sport?</label>
-      <select class="form-control" id="q3">
+      <select class="form-control" id="sport" name="sport">
         <option>Select one of the below...</option>
         <option>Basketball</option>
         <option>Football</option>
@@ -45,7 +47,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite type of restaurant?</label>
-      <select class="form-control" id="q4">
+      <select class="form-control" id="food" name="food">
         <option>Select one of the below...</option>
         <option>Asian (Chinese/Thai/Indian/Sushi)</option>
         <option>American</option>
@@ -56,7 +58,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Which would you prefer to do?</label>
-      <select class="form-control" id="q5">
+      <select class="form-control" id="activity" name="activity">
         <option>Select one of the below...</option>
         <option>Spend the day at the beach</option>
         <option>Spend the day hiking/rock climbing</option>

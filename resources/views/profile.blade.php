@@ -9,31 +9,33 @@
 </nav>
 
 <div class="container" style="background:white">
-    <form>
+    <form method="POST" action="">
+        {{csrf_field() }}
+
         <div class="form-group">
             <label for="username">Your Name</label>
-            <input type="text" class="form-control" id="user_name" placeholder="Your Name">
+            <input type="text" class="form-control" id="user_name" placeholder="Your Name" name="user_name">
         </div>
         <div class="form-group">
             <label for="email address">Email Address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
         </div>
         <div class="form-group">
             <label for="postalCode">Postal Code</label>
-            <input type="text" class="form-control" id="postal_code" placeholder="Postal Code">
+            <input type="text" class="form-control" id="postal_code" placeholder="Postal Code" name="postal_code">
         </div>
         <div class="form-group">
             <label for="status">Status</label>
-            <input type="text" class="form-control" id="status" placeholder="Status">
+            <input type="text" class="form-control" id="status" placeholder="Status" name="status">
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1"> Field of Study </label>
-            <select class="form-control" id="field_study">
+            <select class="form-control" id="field_study" name="field_study">
                 <option>Choose your field of Study</option>
                 <option>Arts and Sciences</option>
                 <option>Mathematics</option>
@@ -44,7 +46,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Picture</label>
-            <input type="url" class="form-control" id="pic" placeholder="Picture URL">
+            <input type="url" class="form-control" id="pic" placeholder="Picture URL" name="pic">
         </div>
         <a>
             <br>
