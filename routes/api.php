@@ -38,5 +38,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::POST ('/user', function() {
     @csrf;
-    return redirect()->route('/survey');
+    return redirect('/survey');
 });
