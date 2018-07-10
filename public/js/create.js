@@ -26,7 +26,7 @@ $("#create-form").on("click", function (event) {
 
   $.ajax({
     type: "POST",
-    url: "api/addNew",
+    // url: "api/addNew",
     data: person,
     success: function (data) {
       console.log("---------------MESSAGE-----------");
@@ -34,5 +34,4 @@ $("#create-form").on("click", function (event) {
       window.location.href = ("/survey" + data.id);
     }
   });
-
 })
