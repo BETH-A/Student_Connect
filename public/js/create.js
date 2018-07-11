@@ -26,7 +26,7 @@ $("#create-form").on("click", function (event) {
 
   $.ajax({
     type: "POST",
-    // url: "api/addNew",
+    url: "/profile/_id",
     data: person,
     success: function (data) {
       console.log("---------------MESSAGE-----------");
