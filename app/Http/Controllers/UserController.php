@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\User;
+use App\Users;
 
 //create routes
 
@@ -16,24 +16,24 @@ public function store()
 
     // Create new survey using the requested data (can be setup as an array)
 
-    $user = new User;
+    $users = new User;
 
-    $user->name = request('name');
+    $users->name = request('name');
 
-    $user->email = request('email');
+    $users->email = request('email');
 
-    $user->password = request('password');
+    $users->password = request('password');
 
-    $user->postal_code = request('postal_code');
+    $users->postal_code = request('postal_code');
 
-    $user->status = request('status');
+    $users->status = request('status');
 
-    $user->field_study = request('field_study');
+    $users->field_study = request('field_study');
 
-    $user->pic = request('pic');
+    $users->pic = request('pic');
 
     // Save it to the DB
-    $user->save();
+    $users->save();
 
     // And then redirect to the wall page
     return redirect('/survey');
