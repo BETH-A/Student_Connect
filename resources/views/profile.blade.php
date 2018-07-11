@@ -9,7 +9,7 @@
 </nav>
 
 <div class="container" style="background:white">
-    <form method="POST" action="">
+    <form >
         {{csrf_field() }}
 
         <div class="form-group">
