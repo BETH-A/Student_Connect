@@ -24,14 +24,14 @@ $("#create-form").on("click", function (event) {
   };
   console.log(person)
 
-  // $.ajax({
-  //   type: "POST",
-  //   // url: "api/addNew",
-  //   data: person,
-  //   success: function (data) {
-  //     console.log("---------------MESSAGE-----------");
-  //     console.log(data.id);
-  //     window.location.href = ("/survey" + data.id);
-  //   }
-  // });
+  $.ajax({
+    type: "POST",
+    // url: "api/addNew",
+    data: person,
+    success: function (data) {
+      console.log("---------------MESSAGE-----------");
+      console.log(data.id);
+      window.location.href = ("/survey" + data.id);
+    }
+  });
 })
