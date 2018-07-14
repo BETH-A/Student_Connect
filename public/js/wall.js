@@ -173,7 +173,7 @@ $.ajax({
   var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";  
   
 
-  $(".weather").append(city + " " + temp + " &deg;F " + " ")
+  // $(".weather").append(city + " " + temp + " &deg;F " + " ")
   $(".icon").attr('src', iconUrl);
   console.log(response.city);
 

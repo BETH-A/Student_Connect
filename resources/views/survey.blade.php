@@ -2,6 +2,7 @@
   crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" media="screen" href="css/survey.css" />
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' /> 
+<link rel="shortcut icon" type="image/png" href="/img/connect.png" />
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
   <div class="navbar-brand">Student Survey... tell us a little about yourself</div>
