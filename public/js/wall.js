@@ -78,10 +78,14 @@ $.ajax({
   console.log(response.results);
 
   var temp = response.main.temp;
-  var weather = response.weather[0].main;
+  var icon = response.weather[0].icon;
   var city = response.name;
+  var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";  
+  
 
-  $(".weather").append(city + " " + temp + " &deg;F " + weather);
-  console.log(response.city)
+  $(".weather").append(city + " " + temp + " &deg;F " + " ")
+  $(".icon").attr('src', iconUrl);
+  console.log(response.city);
+
 
 });

@@ -43,13 +43,13 @@
                     @endif
                 </div>
             </div>
-</div>
         </div>
-            <div id="createAccountButton">
-                <div class="btn-text" href="{{ url('/profile') }}">Create Account</div>
-            </div>
-            <div class="codepen-by">StudentConnect 2018</div>
-        </div>
+    </div>
+    <div id="createAccountButton">
+        <div class="btn-text" href="{{ url('/profile') }}">Create Account</div>
+    </div>
+    <div class="codepen-by">StudentConnect 2018</div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
