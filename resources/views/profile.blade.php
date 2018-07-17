@@ -10,12 +10,12 @@
 </nav>
 
 <div class="container" style="background:white">
-    <form >
+    <form method="POST" action="{{url('/api/profile')}}">
         {{csrf_field() }}
 
         <div class="form-group">
             <label for="username">Your Name</label>
-            <input type="text" class="form-control" id="user_name" placeholder="Your Name" name="user_name">
+            <input type="text" class="form-control" id="user_name" placeholder="Your Name" name="name">
         </div>
         <div class="form-group">
             <label for="email address">Email Address</label>
@@ -51,11 +51,11 @@
         </div>
         <a>
             <br>
-            <input id="create-form" type="button" class="btn btn-default btn-lg" value="Submit" name="Submit">
+            <button id="create-form" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
         </a>
     </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="/js/create.js"></script>
+<!-- <script src="/js/create.js"></script> -->

@@ -26,12 +26,11 @@ $("#create-form").on("click", function (event) {
 
   $.ajax({
     type: "POST",
-    url: "/profile/_id",
+    url: "/api/profile",
     data: person,
     success: function (data) {
-      console.log("---------------MESSAGE-----------");
-      console.log(data.id);
-      window.location.href = ("/survey" + data.id);
+      console.log(data);
+      // window.location.href = ("/survey");
     }
   });
 })
