@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
   crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" media="screen" href="css/survey.css" />
+<link rel="stylesheet" type="text/css" media="screen" href={{asset('css/survey.css')}} />
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' /> 
 <link rel="shortcut icon" type="image/png" href="/img/connect.png" />
 
@@ -10,8 +10,10 @@
 
 <div class="container" style="background:white">
 
-  <form method="POST" action="">
+  <form method="POST" action="{{url('/api/survey')}}">
     {{csrf_field() }}
+
+    <input type ="hidden" name = "id" value="{{$user_id}}">
     
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of movie?</label>
@@ -68,13 +70,10 @@
         <option>Spend the day with friends/family</option>
       </select>
     </div>
-    <!-- for testing purposes the "button type" was changed from "submit" to "button" inorder to prevent the page reloading each time it's clicked. -->
-
-    <!-- TODO need to make this an input just like the other one  -->
     <a>
       <br>
       <br>
-      <input id="survey-button" type="button" class="btn btn-default btn-lg" value="Submit" name="Submit">
+      <button id="survey-button" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
     </a>
   </form>
 </div>
@@ -82,5 +81,5 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
-<script src="/js/survey.js">
+<!-- <script src="/js/survey.js"> -->
 </script>

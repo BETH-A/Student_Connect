@@ -1,4 +1,3 @@
-<!-- php artisan make:controller 'controllerName' -r = builds boilerplate for all  method routes -->
 <?php
 
 namespace App\Http\Controllers;
@@ -9,8 +8,10 @@ use App\Survey;
 
 //create routes
 
+class SurveyController extends Controller {
 
-public function store() 
+
+public function store(Request $request) 
 
 {
 
@@ -18,19 +19,21 @@ public function store()
 
     $survey = new Survey;
 
-    $survey->music = request('music');
+    $survey->user_id = $request->input('user_id');
 
-    $survey->movie = request('movie');
+    $survey->music = $request->input('music');
 
-    $survey->sport = request('sport');
+    $survey->movie = $request->input('movie');
 
-    $survey->food = request('food');
+    $survey->sport = $request->input('sport');
 
-    $survey->activity = request('activity');
+    $survey->food = $request->input('food');
+
+    $survey->activity = $request->input('activity');
 
     // Save it to the DB
     $survey->save();
 
     // And then redirect to the wall page
-    return redirect('/wall');
-};
+    return view('wall')->with('user_id',$users->id);
+}}

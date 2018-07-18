@@ -33,6 +33,7 @@ public function store(Request $request)
     // Save it to the DB
     $users->save();
 
+
     // And then redirect to the wall page
-    return view('/survey' + data.id);
+    return view('survey')->with('user_id', $users->id);
 }}
