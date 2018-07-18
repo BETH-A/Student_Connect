@@ -1,6 +1,17 @@
 <?php
 
 /*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+/*
 Route::get('/', 'LoginController@index');
 
 Eloquent model => User
@@ -19,30 +30,35 @@ php artisan make:model User - mc (makes all 3 files at once)
  DELETE /posts/{id} = deletes resource from DB
 */
 
- use App\Survey;
 
 Route::get('/', function () {
-   return view('login');
-});
+    return view('login');
+ });
+ 
+ 
+ Route::get('/profile', 
+ 
+ function () {
+     return view('profile');
+ }
+ );
+ 
+ Route::get('/survey', 
+ 
+ function () {
+     return view('survey');        
+ }
+ );
+ 
+ Route::get('/wall', function () {
+     return view('wall');
+ });
 
 
-Route::get('/profile', 
+Auth::routes();
 
-function () {
-    return view('profile');
-}
-);
+Route::get('/chat', 'ChatController@index')->name('chat');
 
-Route::get('/survey', 
-
-function () {
-    return view('survey');        
-}
-);
-
-Route::get('/wall', function () {
-    return view('wall');
-});
-
-
-
+Route::get('/contacts', 'ContactsController@get');
+Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
+Route::post('/conversation/send', 'ContactsController@send');
