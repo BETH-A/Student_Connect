@@ -15,8 +15,8 @@ class CreateSurveysTable extends Migration
     {
         Schema::create('surveys', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedInteger('userId');
+            $table->foreign('userId')->references('id')->on('users');
             $table->text('movie');
             $table->text('music');
             $table->text('sport');

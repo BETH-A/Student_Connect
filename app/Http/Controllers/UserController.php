@@ -35,5 +35,5 @@ public function store(Request $request)
 
 
     // And then redirect to the wall page
-    return view('survey')->with('user_id', $users->id);
+    return view('survey')->with('userId', $users->id);
 }}

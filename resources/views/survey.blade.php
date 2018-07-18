@@ -13,7 +13,7 @@
   <form method="POST" action="{{url('/api/survey')}}">
     {{csrf_field() }}
 
-    <input type ="hidden" name = "id" value="{{$user_id}}">
+    <input type ="hidden" name = "id" value="{{$userId}}">
     
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of movie?</label>

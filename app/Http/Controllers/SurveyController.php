@@ -19,7 +19,7 @@ public function store(Request $request)
 
     $survey = new Survey;
 
-    $survey->user_id = $request->input('user_id');
+    $survey->userId = $request->input('userId');
 
     $survey->music = $request->input('music');
 
@@ -35,5 +35,5 @@ public function store(Request $request)
     $survey->save();
 
     // And then redirect to the wall page
-    return view('wall')->with('user_id',$users->id);
+    return view('wall')->with('userId',$users->id);
 }}
