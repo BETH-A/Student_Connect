@@ -18,7 +18,7 @@ class SurveyController extends Controller {
          */
         public function index()
         {
-            //
+            $surveys = POST::all();
         }
     
         /**
