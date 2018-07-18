@@ -15,20 +15,20 @@
 
         <div class="form-group">
             <label for="username">Your Name</label>
-            <input type="text" class="form-control" id="user_name" placeholder="Your Name" name="name">
+            <input type="text" class="form-control" id="user_name" placeholder="Your Name" name="name" required>
         </div>
         <div class="form-group">
             <label for="email address">Email Address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" name="email" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
         </div>
         <div class="form-group">
             <label for="postalCode">Postal Code</label>
-            <input type="text" class="form-control" id="postal_code" placeholder="Postal Code" name="postal_code">
+            <input type="text" class="form-control" id="postal_code" placeholder="Postal Code" name="postal_code" required>
         </div>
         <div class="form-group">
             <label for="status">Status</label>
@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1"> Field of Study </label>
-            <select class="form-control" id="field_study" name="field_study">
+            <select class="form-control" id="field_study" name="field_study" required>
                 <option>Choose your field of Study</option>
                 <option>Arts and Sciences</option>
                 <option>Mathematics</option>
@@ -51,7 +51,7 @@
         </div>
         <a>
             <br>
-            <button id="create-form" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+            <button id="create-form" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">Submit</button>
         </a>
     </form>
 </div>

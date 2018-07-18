@@ -13,11 +13,11 @@
   <form method="POST" action="{{url('/api/survey')}}">
     {{csrf_field() }}
 
-    <input type ="hidden" name = "id" value="{{$userId}}">
+    <input type ="hidden" name = "id" value="{{$userId}}" required>
     
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of movie?</label>
-      <select class="form-control" id="movie" name="movie">
+      <select class="form-control" id="movie" name="movie" required>
         <option>Select one of the below...</option>
         <option>Action</option>
         <option>Comedy</option>
@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite genre of music?</label>
-      <select class="form-control" id="music" name="music">
+      <select class="form-control" id="music" name="music" required>
         <option>Select one of the below...</option>
         <option>Country</option>
         <option>Pop</option>
@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite type of sport?</label>
-      <select class="form-control" id="sport" name="sport">
+      <select class="form-control" id="sport" name="sport" required>
         <option>Select one of the below...</option>
         <option>Basketball</option>
         <option>Football</option>
@@ -50,7 +50,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">What is your favorite type of restaurant?</label>
-      <select class="form-control" id="food" name="food">
+      <select class="form-control" id="food" name="food" required>
         <option>Select one of the below...</option>
         <option>Asian (Chinese/Thai/Indian/Sushi)</option>
         <option>American</option>
@@ -61,7 +61,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Which would you prefer to do?</label>
-      <select class="form-control" id="activity" name="activity">
+      <select class="form-control" id="activity" name="activity" required>
         <option>Select one of the below...</option>
         <option>Spend the day at the beach</option>
         <option>Spend the day hiking/rock climbing</option>
@@ -73,9 +73,10 @@
     <a>
       <br>
       <br>
-      <button id="survey-button" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+      <button id="survey-button" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">Submit</button>
     </a>
   </form>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

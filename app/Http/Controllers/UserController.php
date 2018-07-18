@@ -13,6 +13,12 @@ class UserController extends Controller {
 public function store(Request $request)
 {
     // Create new survey using the requested data (can be setup as an array)
+    $this->validate(request(), [
+        'name' => 'required',
+        'email' => 'unique:users,email',
+        'password' => 'required|min:6',
+        'postal_code' => 'required|digits:5',
+    ]);
 
     $users = new User;
 

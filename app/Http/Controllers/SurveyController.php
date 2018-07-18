@@ -41,12 +41,20 @@ class SurveyController extends Controller {
 public function store(Request $request) 
 
 {
-
     // Create new survey using the requested data (can be setup as an array)
+    dd($request->input('userId'));
 
+    $this->validate(request(), [
+        'userId' => 'unique:users,id',
+        'music'  => 'required',
+        'movie' => 'required',
+        'sport' => 'required',
+        'food' => 'required',
+        'activity' => 'required',
+    ]);
     $survey = new Survey;
 
-    $survey->userId = $request->input('userId');
+    $survey->userId = 'userId';
 
     $survey->music = $request->input('music');
 
