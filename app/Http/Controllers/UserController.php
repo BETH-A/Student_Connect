@@ -10,36 +10,113 @@ use App\User;
 
 class UserController extends Controller {
 
-public function store(Request $request)
-{
-    // Create new survey using the requested data (can be setup as an array)
-    $this->validate(request(), [
-        'name' => 'required',
-        'email' => 'unique:users,email',
-        'password' => 'required|min:6',
-        'postal_code' => 'required|digits:5',
-    ]);
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $surveys = POST::all();
 
-    $users = new User;
+        return view('users.id', compact('id'));
+    }
 
-    $users->name = $request->input('name');
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
-    $users->email = $request->input('email');
-
-    $users->password = $request->input('password');
-
-    $users->postal_code = $request->input('postal_code');
-
-    $users->status = $request->input('status');
-
-    $users->field_study = $request->input('field_study');
-
-    $users->pic = $request->input('pic');
-
-    // Save it to the DB
-    $users->save();
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 
 
-    // And then redirect to the wall page
-    return view('survey')->with('userId', $users->id);
-}}
+    public function store(Request $request)
+    {
+        // Create new survey using the requested data (can be setup as an array)
+        $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'unique:users,email',
+            'password' => 'required|min:6',
+            'postal_code' => 'required|digits:5',
+        ]);
+
+        $users = new User;
+
+        $users->name = $request->input('name');
+
+        $users->email = $request->input('email');
+
+        $users->password = $request->input('password');
+
+        $users->postal_code = $request->input('postal_code');
+
+        $users->status = $request->input('status');
+
+        $users->field_study = $request->input('field_study');
+
+        $users->pic = $request->input('pic');
+
+        // Save it to the DB
+        $users->save();
+
+
+        // And then redirect to the wall page
+        return view('survey')->with('userId', $users->id);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $userID = POST::find($id);
+
+        return view('id.show', compact('id'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
