@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Survey extends Model
 {
-    public function users()
+    public function user()
         {
-            return $this->belongsTo(Surveys::class);
+            return $this->belongsTo(User::class);
         }
 }
