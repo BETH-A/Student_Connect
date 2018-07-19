@@ -50,6 +50,7 @@ class UserController extends Controller {
             'postal_code' => 'required|digits:5',
         ]);
 
+        //Create User
         $users = new User;
 
         $users->name = $request->input('name');
@@ -69,6 +70,8 @@ class UserController extends Controller {
         // Save it to the DB
         $users->save();
 
+        //Sign them in
+        auth()->login($users);
 
         // And then redirect to the wall page
         return view('survey')->with('userId', $users->id);

@@ -20,7 +20,7 @@
 
     <div id="mainButton">
         <div class="btn-text" onclick="openForm()">Sign In</div>
-        <div class="modal">
+        <div class="modal" method="POST" action="/profile">
             <div class="close-button" onclick="closeForm()">x</div>
             <div class="form-title">Sign In</div>
             <div class="input-group">
