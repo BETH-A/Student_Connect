@@ -45,3 +45,16 @@ Route::get('/wall', function () {
 });
 
 
+Route::get('/register',
+function() {
+    return view('create');
+}
+);
+
+Route::POST('/register', 'RegisterController@store');
+
+Route::get('/session',
+function() {
+    return view('session');
+});
+

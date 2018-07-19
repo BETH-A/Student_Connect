@@ -18,10 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->integer('postal_code');
-            $table->text('status')->nullable($value = true);
-            $table->text('field_study');
-            $table->string('pic')->nullable($value = true);
             $table->rememberToken();
             $table->timestamps();
         });

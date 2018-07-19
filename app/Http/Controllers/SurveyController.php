@@ -10,27 +10,37 @@ use App\Survey;
 
 class SurveyController extends Controller {
 
-    
+    public function __construct()
+    {
+
+    }
         /**
          * Display a listing of the resource.
          *
          * @return \Illuminate\Http\Response
          */
-        public function index()
-        {
+        // public function index()
+        // {
             // $surveys = POST::all();
 
             // return view('surveys.index');
-        }
+        // }
     
         /**
          * Show the form for creating a new resource.
          *
          * @return \Illuminate\Http\Response
          */
+
         public function create()
         {
-            //
+            POST::create([
+                'name' => request('name'),
+                'email' => request('email'),
+                'usersID' => auth()->id()
+            ]);
+    
+            return view('/wall');
         }
     
         /**
@@ -40,40 +50,28 @@ class SurveyController extends Controller {
          * @return \Illuminate\Http\Response
          */
     
-public function store(Request $request) 
+    public function store(Request $request) 
 
-{
-    // Create new survey using the requested data (can be setup as an array)
-    dd($request->input('userId'));
+    {
+        // Create new survey using the requested data (can be setup as an array)
+        dd($request->input('userId'));
 
-    $this->validate(request(), [
-        'userId' => 'unique:users,id',
-        'music'  => 'required',
-        'movie' => 'required',
-        'sport' => 'required',
-        'food' => 'required',
-        'activity' => 'required',
-    ]);
-    $survey = new Survey;
+        $this->validate(request(), [
+            'userId' => 'unique:users,id',
+            'postal_code' => 'required',
+            'field_study' => 'required',
+            'music'  => 'required',
+            'movie' => 'required',
+            'sport' => 'required',
+            'food' => 'required',
+            'activity' => 'required',
+        ]);
 
-    $survey->userId = 'userId';
+    $survey = Survey::create(request(['userId','postal_code', 'status', 'field_study', 'pic', 'music', 'movie', 'sport', 'food', 'activity']));
 
-    $survey->music = $request->input('music');
-
-    $survey->movie = $request->input('movie');
-
-    $survey->sport = $request->input('sport');
-
-    $survey->food = $request->input('food');
-
-    $survey->activity = $request->input('activity');
-
-    // Save it to the DB
-    $survey->save();
-
-    // And then redirect to the wall page
-    return view('wall')->with('userId',$users->id);
-}
+     // And then redirect to the wall page
+    return view('wall')->with('userId',$user->id);
+    }
     /**
      * Display the specified resource.
      *

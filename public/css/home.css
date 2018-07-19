@@ -1,0 +1,36 @@
+body {
+    font-family: 'Raleway';
+    background-image: url(../img/students1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: #00a7ee;
+}
+
+#loginButton {
+    padding-right: 15px;
+}
+
+.jumbotron {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    align: center;
+    margin-top: 125px;
+    height: 200px;
+    margin-left: 83px;
+    margin-right: 83px;
+}
+
+footer {
+    position: fixed;
+    color: white;
+    /* background: #00a7ee; */
+    text-align: center;
+    height: 20px;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+}

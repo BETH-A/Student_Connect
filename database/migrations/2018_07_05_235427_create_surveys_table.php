@@ -17,6 +17,10 @@ class CreateSurveysTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
+            $table->integer('postal_code');
+            $table->text('status')->nullable($value = true);
+            $table->text('field_study');
+            $table->string('pic')->nullable($value = true);
             $table->text('movie');
             $table->text('music');
             $table->text('sport');

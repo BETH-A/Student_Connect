@@ -9,52 +9,27 @@
 
     <title>Student Connect</title>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="/css/loginpage.css" />
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+  crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css" />
+    <!-- <link rel="stylesheet" href="/css/loginpage.css" /> -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,500,300,600' rel='stylesheet' type='text/css' />
 
-</head>
+<!-- </head> -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <div class="navbar-brand">Student Connect</div>
+    <a class="navbar-brand" style="padding-left: 77%"  href="/session" role="button" id="loginButton">Login </a>
+    <a class="navbar-brand" href="/register" role="button" id="registerButton">Register </a>
+</nav>
 
-<body>
-
-    <div id="mainButton">
-        <div class="btn-text" onclick="openForm()">Sign In</div>
-        <div class="modal" method="POST" action="/profile">
-            <div class="close-button" onclick="closeForm()">x</div>
-            <div class="form-title">Sign In</div>
-            <div class="input-group">
-                <input type="text" id="name" onblur="checkInput(this)" />
-                <label for="name">Email</label>
-            </div>
-            <div class="input-group">
-                <input type="password" id="password" onblur="checkInput(this)" />
-                <label for="password">Password</label>
-            </div>
-            <div class="form-button" onclick="closeForm()">Go
-                <div>
-                    @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                        <a href="{{ url('/wall') }}">Student Wall/a> @else
-                            <a href="{{ route('login') }}">Login</a>
-                            <a href="{{ route('profile') }}">create account</a>
-                            @endauth
-                    </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="createAccountButton">
-        <div class="btn-text" href="{{ url('/profile') }}">Create Account</div>
-    </div>
-    <div class="codepen-by">StudentConnect 2018</div>
+    <div>
+    <footer class="codepen-by">StudentConnect 2018</footer>
     </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/js/loginpage.js"></script>
-</body>
+
 
 </html>

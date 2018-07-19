@@ -44,7 +44,8 @@
     </div>
     <div class="weather" style="color:white">
     </div>
-         <div class="icon" style="padding-right: 35px"><img class="icon" src="" alt="Weather icon"></div>
+        <div class="icon" style="padding-right: 35px"><img class="icon" src="" alt="Weather icon"></div>
+    <a class="navbar-brand ml-auto" href="#" >{{Auth::user()->name}}</a>
     <a class="navbar-brand" href="/" role="button" id="logoutButton">LogOut </a>
 </nav>
 
@@ -98,10 +99,10 @@
             <div id="myProfile" class="card">
                 <img class="myProfilePic" width="140" alt="Image" src="/img/avatar.png">
                 <div class="card-body">
-                    <h5 class="card-title">MyProfile
+                    <h5 class="card-title">MyProfile: {{Auth::user()->name}}
                     <a href="#" class="card-link">Edit</a></h5>
                     <hr>
-                    <h6 class="card-title">Status: </h6>
+                    <h6 class="card-title">Status: {{Auth::user()->status}}</h6>
                     <hr>
                     <h6 class="card-subtitle mb-2 text-muted">About Me</h6>
                     <ul class="list-group list-group-flush">
