@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"></link>
 <link rel="stylesheet" type="text/css" media="screen" href="/css/create.css" />
 <!-- <link rel="stylesheet" href="/css/createpage.scss" /> -->
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' /> 
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' />
 <link rel="shortcut icon" type="image/png" href="/img/connect.png" />
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
