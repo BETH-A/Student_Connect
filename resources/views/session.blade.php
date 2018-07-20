@@ -25,7 +25,7 @@
 
    <div class="container" style="background:white">
 
-    <form method="POST" action="/login">
+    <form method="POST" action="/session">
         {{csrf_field() }}
 
       
