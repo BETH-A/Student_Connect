@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="password_confirmation">Confirm Password</label>
-            <input type="password_confirmation" class="form-control" id="password_confirmation" placeholder="Password" name="password_confirmation" required>
+            <input type="password" class="form-control" id="password_confirmation" placeholder="Password" name="password_confirmation" required>
                 <small id="passwordHelp" class="form-text text-muted">Passwords must match</small>
         </div>
         <a>
