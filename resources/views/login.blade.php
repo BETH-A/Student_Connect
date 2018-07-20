@@ -23,6 +23,17 @@
     <a class="navbar-brand" href="/register" role="button" id="registerButton">Register </a>
 </nav>
 
+<div class="form-group">
+            <label for="email address">Email Address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" name="email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                <small id="passwordHelp" class="form-text text-muted">Min of 6 characters</small>
+        </div>
+
     <div>
     <footer class="codepen-by">StudentConnect 2018</footer>
     </div>

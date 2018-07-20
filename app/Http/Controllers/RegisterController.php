@@ -13,7 +13,7 @@ class RegisterController extends Controller
         POST::create([
             'name' => request('name'),
             'email' => request('email'),
-            'usersID' => auth()->id()
+            'usersId' => auth()->id()
         ]);
 
         return view('/survey');

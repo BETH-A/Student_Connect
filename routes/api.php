@@ -39,3 +39,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::POST ('/profile', 'UserController@store');
 
 Route::POST ('/survey', 'SurveyController@store');
+

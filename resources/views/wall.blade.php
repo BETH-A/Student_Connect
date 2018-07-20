@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/png" href="/img/connect.png" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="/css/wall.css" />
+<link rel="stylesheet" type="text/css" media="screen" href={{asset('/css/wall.css')}} />
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css' />
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
@@ -126,4 +126,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 <!-- connecting js file  -->
-<script src="/js/wall.js"></script>
+<!-- <script src="/js/wall.js"></script> -->

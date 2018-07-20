@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Survey;
 
@@ -12,7 +13,8 @@ class SurveyController extends Controller {
 
     public function __construct()
     {
-
+        $this->middleware('auth');
+        $this->user = \Auth::user();
     }
         /**
          * Display a listing of the resource.
@@ -37,7 +39,7 @@ class SurveyController extends Controller {
             POST::create([
                 'name' => request('name'),
                 'email' => request('email'),
-                'usersID' => auth()->id()
+                'usersId' => auth()->id()
             ]);
     
             return view('/wall');
@@ -54,23 +56,46 @@ class SurveyController extends Controller {
 
     {
         // Create new survey using the requested data (can be setup as an array)
-        dd($request->input('userId'));
 
         $this->validate(request(), [
-            'userId' => 'unique:users,id',
             'postal_code' => 'required',
             'field_study' => 'required',
             'music'  => 'required',
             'movie' => 'required',
             'sport' => 'required',
             'food' => 'required',
-            'activity' => 'required',
+            'activity' => 'required'
         ]);
+        // dd($request->input('userId'));
 
-    $survey = Survey::create(request(['userId','postal_code', 'status', 'field_study', 'pic', 'music', 'movie', 'sport', 'food', 'activity']));
+    $survey = new Survey;
+
+    $survey->userId = $request->input('userId');
+
+    $survey->postal_code = $request->input('postal_code');
+
+    $survey->field_study = $request->input('field_study');
+
+    $survey->status = $request->input('status');
+
+    $survey->pic = $request->input('pic');
+
+    $survey->music = $request->input('music');
+
+    $survey->movie = $request->input('movie');
+
+    $survey->sport = $request->input('sport');
+
+    $survey->food = $request->input('food');
+
+    $survey->activity = $request->input('activity');
+    
+    // dd($survey);
+
+    $survey->save();
 
      // And then redirect to the wall page
-    return view('wall')->with('userId',$user->id);
+    return view('wall')->with(compact('survey'));
     }
     /**
      * Display the specified resource.
