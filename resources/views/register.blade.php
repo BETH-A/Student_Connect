@@ -43,7 +43,7 @@
                 <small id="passwordHelp" class="form-text text-muted">Min of 6 characters</small>
         </div>
         <div class="form-group">
-            <label for="password_confirmation">Confirm Password</label>
+            <label for="password">Confirm Password</label>
             <input type="password" class="form-control" id="password_confirmation" placeholder="Password" name="password_confirmation" required>
                 <small id="passwordHelp" class="form-text text-muted">Passwords must match</small>
         </div>
