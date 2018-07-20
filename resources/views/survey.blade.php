@@ -15,7 +15,7 @@
     <form method="POST" action="{{url('/api/survey')}}">
         {{csrf_field() }}
 
-        <input type="hidden" name="userId" value="{{$userId}}">
+        <input type="hidden" name="id" value="{{$userId}}">
         <div class="form-group">
             <label for="postalCode">Postal Code</label>
             <input type="text" class="form-control" id="postal_code" placeholder="Postal Code" name="postal_code" required>

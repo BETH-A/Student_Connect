@@ -21,7 +21,7 @@
    
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
   <div class="navbar-brand">Student Register</div>
-    <a class="navbar-brand" style="padding-left: 90%"  href="/" role="button" id="homeButton">Home </a>
+    <a class="navbar-brand ml-auto color-white" href="/" role="button" id="homeButton">Home </a>
 </nav>
 
    <div class="container" style="background:white">

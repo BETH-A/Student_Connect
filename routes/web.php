@@ -58,6 +58,3 @@ function() {
     return view('session');
 });
 
-Route::POST('/session', 'SessionController@store');
-
-// Route::post('login', [ 'as' => 'login', 'uses' => 'LoginController@do']);
