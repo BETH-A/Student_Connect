@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+$user = Auth::user();
+$id = Auth::id();
+
+
 class WallController extends Controller
 {
     /**

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\User;   
 
+$user = Auth::user();
+$id = Auth::id();
+
+
 class SessionsController extends Controller
 {
 
@@ -29,7 +33,7 @@ class SessionsController extends Controller
             ]);
         }
         
-        return view('/wall');
+        return view('wall');
     }
 
 

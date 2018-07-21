@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+$user = Auth::user();
+$id = Auth::id();
+
 //create routes
 
 class UserController extends Controller {
@@ -47,7 +50,6 @@ class UserController extends Controller {
             'name' => 'required',
             'email' => 'unique:users,email',
             'password' => 'required|min:6',
-            'postal_code' => 'required|digits:5',
         ]);
 
         //Create User
