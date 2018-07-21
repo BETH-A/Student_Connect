@@ -32,10 +32,10 @@ php artisan make:model User - mc (makes all 3 files at once)
  DELETE /posts/{id} = deletes resource from DB
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/users', function (Request $request) {
     return $request->user();
 });
 
 Route::POST ('/profile', 'UserController@store');
 
-Route::POST ('/survey', 'SurveyController@store');
+Route::POST ('/survey','SurveyController@store');

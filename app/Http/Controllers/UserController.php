@@ -47,7 +47,6 @@ class UserController extends Controller {
             'name' => 'required',
             'email' => 'unique:users,email',
             'password' => 'required|min:6',
-            'postal_code' => 'required|digits:5',
         ]);
 
         //Create User
@@ -72,7 +71,7 @@ class UserController extends Controller {
 
         //Sign them in
         auth()->login($users);
-
+        
         // And then redirect to the wall page
         return view('survey')->with('userId', $users->id);
     }
