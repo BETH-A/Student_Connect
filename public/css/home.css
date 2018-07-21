@@ -20,6 +20,10 @@ body {
     color: white;
 }
 
+#navbarDropdown {
+    color:white;
+}
+
 
 #loginButton {
     padding-right: 15px;
