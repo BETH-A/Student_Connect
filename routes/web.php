@@ -47,4 +47,10 @@ Route::post('/session', 'SessionsController@destroy');
 // Route::post('login', [ 'as' => 'login', 'uses' => 'LoginController@do']);
 Auth::routes();
 
+Route::get('/chat', 'ChatController@index')->name('chat');
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/contacts', 'ContactsController@get');
+Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
+Route::post('/conversation/send', 'ContactsController@send');
