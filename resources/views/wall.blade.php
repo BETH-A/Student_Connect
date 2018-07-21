@@ -111,7 +111,7 @@
                         <li class="list-group-item list-group-item" id="activity">What you prefer to do: Spend the day watching TV/playing video games</li>
                     </ul>
                     <br>
-                    <a href="#" class="card-link">Message</a>
+                    <a href="{{ url('/chat') }}" class="card-link">Message</a>
                     <a href="#" class="card-link">Update Status</a>
                 </div>
             </div>
