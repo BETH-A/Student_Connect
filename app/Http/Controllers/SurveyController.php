@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Survey;
-
+use App\User;
 //create routes
+$user = Auth::user();
+$id = Auth::id();
 
 class SurveyController extends Controller {
 

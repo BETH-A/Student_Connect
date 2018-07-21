@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+$user = Auth::user();
+$id = Auth::id();
+
 //create routes
 
 class UserController extends Controller {
