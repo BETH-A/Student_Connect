@@ -8,7 +8,18 @@ body {
 
 .navbar {
     background: #00a7ee;
+    color: white;
 }
+.card-header {
+    background: #00a7ee;
+    color: white;
+}
+
+.btn {
+    background: #00a7ee;
+    color: white;
+}
+
 
 #loginButton {
     padding-right: 15px;
