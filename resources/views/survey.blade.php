@@ -12,10 +12,10 @@
 
 <div class="container" style="background:white">
 
-    <form method="POST" action="{{url('/api/survey')}}">
+    <form method="POST" action="/api/survey">
         {{csrf_field() }}
 
-         <input type="hidden" name="userId" value="{{$userId}}">
+         <input type="hidden" name="userId" value="{{Auth::user()->id}}">
         <div class="form-group">
             <label for="postalCode">Postal Code</label>
             <input type="text" class="form-control" id="postal_code" placeholder="Postal Code" name="postal_code" required>
@@ -97,7 +97,7 @@
         <a>
             <br>
             <br>
-            <button id="survey-button" type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">Submit</button>
+            <a href="/wall"><button class="btn btn-default btn-lg">Submit</button></a>
         </a>
     </form>
 

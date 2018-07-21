@@ -13,8 +13,7 @@ $id = Auth::id();
 
 class SurveyController extends Controller {
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
         $this->user = \Auth::user();
     }
@@ -36,8 +35,7 @@ class SurveyController extends Controller {
          * @return \Illuminate\Http\Response
          */
 
-        public function create()
-        {
+        public function create() {
             POST::create([
                 'name' => request('name'),
                 'email' => request('email'),
@@ -54,11 +52,8 @@ class SurveyController extends Controller {
          * @return \Illuminate\Http\Response
          */
     
-    public function store(Request $request) 
-
-    {
+    public function store(Request $request) {
         // Create new survey using the requested data (can be setup as an array)
-        // dd($request->input('userId'));
 
         $this->validate(request(), [
             'userId' => 'unique:users,id',
@@ -71,34 +66,34 @@ class SurveyController extends Controller {
             'activity' => 'required',
         ]);
 
- // dd($request->input('userId'));
+        // dd($request->input('userId'));
  
-     $survey = new Survey;
- 
-     $survey->userId = $request->input('userId');
- 
-     $survey->postal_code = $request->input('postal_code');
- 
-     $survey->field_study = $request->input('field_study');
- 
-     $survey->status = $request->input('status');
- 
-     $survey->pic = $request->input('pic');
- 
-     $survey->music = $request->input('music');
- 
-     $survey->movie = $request->input('movie');
- 
-     $survey->sport = $request->input('sport');
- 
-     $survey->food = $request->input('food');
- 
-     $survey->activity = $request->input('activity');
-     
-     // dd($survey);
-     $survey->save();
-    // And then redirect to the wall page
-    return view('wall')->with(compact('survey'));
+        $survey = new Survey;
+    
+        $survey->userId = $request->input('userId');
+    
+        $survey->postal_code = $request->input('postal_code');
+    
+        $survey->field_study = $request->input('field_study');
+    
+        $survey->status = $request->input('status');
+    
+        $survey->pic = $request->input('pic');
+    
+        $survey->music = $request->input('music');
+    
+        $survey->movie = $request->input('movie');
+    
+        $survey->sport = $request->input('sport');
+    
+        $survey->food = $request->input('food');
+    
+        $survey->activity = $request->input('activity');
+        
+        // dd($survey);
+        $survey->save();
+        // And then redirect to the wall page
+        return view('wall')->with(compact('survey'));
     }
     /**
      * Display the specified resource.
@@ -106,8 +101,7 @@ class SurveyController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -117,8 +111,7 @@ class SurveyController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -129,8 +122,7 @@ class SurveyController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -140,8 +132,7 @@ class SurveyController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
 }

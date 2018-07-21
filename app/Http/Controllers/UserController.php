@@ -74,7 +74,7 @@ class UserController extends Controller {
 
         //Sign them in
         auth()->login($users);
-
+        
         // And then redirect to the wall page
         return view('survey')->with('userId', $users->id);
     }

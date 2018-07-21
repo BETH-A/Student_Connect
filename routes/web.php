@@ -34,8 +34,6 @@ function() {
 }
 );
 
-Route::post('/register', 'Auth\RegisterController@store');
-
 Route::get('/session',
 function() {
     return view('session');
@@ -47,3 +45,6 @@ Route::post('/session', 'SessionsController@destroy');
 
 
 // Route::post('login', [ 'as' => 'login', 'uses' => 'LoginController@do']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
