@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/wall';
+    protected $redirectTo = 'survey';
 
     /**
      * Create a new controller instance.
@@ -68,5 +68,23 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    public function store(array $data)
+    {
+        // Validate the form
+        $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|confirmed|min:6',
+        ]);
+
+        //Create User
+        $user = User::create(request(['name', 'email', 'password']));
+
+        //Sign them in
+        auth()->login($user);
+
+        // And then redirect to the wall page
+        return view('/survey')->with('userId', $user->id);
     }
 }

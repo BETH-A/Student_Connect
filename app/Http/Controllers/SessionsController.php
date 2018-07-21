@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;   
 
-$user = Auth::user();
-$id = Auth::id();
+// $user = Auth::user();
+// $id = Auth::id();
 
 
 class SessionsController extends Controller

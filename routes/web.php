@@ -34,7 +34,7 @@ function() {
 }
 );
 
-Route::post('/register', 'RegisterController@store');
+Route::post('/register', 'Auth\RegisterController@store');
 
 Route::get('/session',
 function() {
